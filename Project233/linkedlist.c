@@ -3,20 +3,8 @@
 #include<stdlib.h>
 #include<string.h>
 
-typedef struct ListNode {
-	char data[4];
-	struct ListNode* link;
-}listNode;
+#include "linkedlist.h";
 
-typedef struct {
-	listNode* head;
-}linkList_h;
-
-linkList_h* createdLinkedList(void);
-void freeLinkedList_h(linkList_h* L);
-void printList(linkList_h* L);
-void insertMiddleNode(linkList_h* L, listNode* pre, char* x);
-void insertLastNode(linkList_h* L, char* x);
 
 linkList_h* createdLinkedList(void) {
 	linkList_h* L;
@@ -96,27 +84,3 @@ void insertLastNode(linkList_h* L, char* x) {
 
 }
 
-void main() {
-	linkList_h* L;
-	L = createdLinkedList();
-
-	printf("\n1.공백 리스트 생성하기!\n");
-	printList(L);
-
-	printf("\n2.리스트에 [수]노드 입력하기\n");
-	insertFirstNode(L, "수");
-	printList(L);
-
-	printf("\n3.리스트 마지막에 [금]노드 입력하기\n");
-	insertLastNode(L, "금");
-	printList(L);
-
-	printf("\n4.리스트 첫번째에 [월]노드 삼입하기\n");
-	insertFirstNode(L, "월");
-	printList(L);
-
-	printf("\n5.리스트 공간을 해제하여 공백 리스트 만들기\n");
-	freeLinkedList_h(L);
-	printList(L);
-
-}
