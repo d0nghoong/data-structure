@@ -15,4 +15,9 @@ void freeLinkedList_h(linkList_h* L);
 void printList(linkList_h* L);
 void insertMiddleNode(linkList_h* L, listNode* pre, char* x);
 void insertLastNode(linkList_h* L, char* x);
+void insertFirstNode(linkList_h* L, char* x);
+void deleteNode(linkList_h* L, listNode* p);
+listNode* searchNode(linkList_h* L, char* x);
+void reverse(linkList_h* L);
+
 #endif
