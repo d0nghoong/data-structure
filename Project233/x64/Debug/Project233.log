@@ -1,6 +1,0 @@
-﻿  main.cpp
-  linkedlist.cpp
-  linkedlist_delete.cpp
-C:\Users\이동형\Desktop\자료구조\자료구조 프로젝트\Linked-List-insert\Project233\linkedlist_delete.cpp(6,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
-  코드를 생성하고 있습니다...
-  Project233.vcxproj -> C:\Users\이동형\Desktop\자료구조\자료구조 프로젝트\Linked-List-insert\x64\Debug\Project233.exe
