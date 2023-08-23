@@ -1,2 +1,5 @@
-﻿  소스.cpp
+﻿  main.cpp
+  linklist.cpp
+  linkedlist.h
+  linklist-delete.cpp
   Project233.vcxproj -> C:\Users\이동형\source\repos\Project233\Debug\Project233.exe
