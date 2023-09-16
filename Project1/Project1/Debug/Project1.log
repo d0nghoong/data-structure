@@ -1,3 +1,5 @@
 ﻿  소스.cpp
-C:\Users\이동형\Desktop\자료구조\자료구조 프로젝트\linkedPoly\Project1\Project1\소스.cpp(88,13): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+C:\Users\이동형\Desktop\자료구조\자료구조 프로젝트\linkedPoly\Project1\Project1\소스.cpp(7,13): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  LinkedPoly.cpp
+  코드를 생성하고 있습니다...
   Project1.vcxproj -> C:\Users\이동형\Desktop\자료구조\자료구조 프로젝트\linkedPoly\Project1\Debug\Project1.exe
