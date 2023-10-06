@@ -90,7 +90,7 @@ void print_forward(listPointer* list) {
 	listPointer* curr;
 	FILE* outfile;
 
-	outfile = fopen("C:\\Users\\이동형\\Desktop\\자료구조\\자료구조 프로젝트\\stack\\Project2\\hw2 output.txt", "a");
+	outfile = fopen("./hw2 output.txt", "a");
 	if (list) {
 		curr = list;
 		while (1) {
@@ -108,7 +108,7 @@ void print_forward(listPointer* list) {
 void print_reverse(listPointer* list) {
 	listPointer* curr;
 	FILE* outfile;
-	outfile = fopen("C:\\Users\\이동형\\Desktop\\자료구조\\자료구조 프로젝트\\stack\\Project2\\hw2 output.txt", "a");
+	outfile = fopen("./hw2 output.txt", "a");
 	if (list) {
 		curr = list->prev;
 		while (curr != list) {
@@ -124,12 +124,15 @@ void print_reverse(listPointer* list) {
 	fclose(outfile);
 }
 
-int main() {
-	char command[100] = {};
+int main(int argc, char*argv[]) {
 	listHead* h;
 	h = createlistHead();
+	if (argc != 2) {
+		printf("usage: ./hw2 input_filename");
+		return 0;
+	}
 
-	FILE* fp_input = fopen("C:\\Users\\이동형\\Desktop\\자료구조\\자료구조 프로젝트\\stack\\Project2\\hw2 input.txt", "r");
+	FILE* fp_input = fopen(argv[1], "r");
 	if (fp_input == NULL) {
 		printf("입력 파일이 없습니다\n");
 		return 0;
