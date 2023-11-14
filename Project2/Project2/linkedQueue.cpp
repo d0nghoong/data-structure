@@ -1,25 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-#include<stdlib.h>
-
-typedef char element;
-
-typedef struct QNode {
-	element data;
-	struct QNode* link;
-}QNode;
-
-typedef struct LQueueType {
-	QNode* front, * rear;
-}LQueueType;
-
-LQueueType* createLinkedQueue(void);
-int isLQEmpty(LQueueType* lq);
-void enLQueue(LQueueType* lq, element item);
-element deLQueue(LQueueType* lq);
-element peek(LQueueType* lq);
-void print(LQueueType* lq);
-
+#include "linkedQueue.h"
 LQueueType* createLinkedQueue() {
 	LQueueType* newNode;
 	newNode = (LQueueType*)malloc(sizeof(LQueueType));
@@ -79,19 +58,4 @@ void print(LQueueType* lq) {
 		temp = temp->link;
 	}
 	printf("]");
-}
-
-int main() {
-	LQueueType* LQ = createLinkedQueue();
-	element data;
-	printf("\n 삽입 A>>"); enLQueue(LQ, 'A'); print(LQ);
-	printf("\n 삽입 B>>"); enLQueue(LQ, 'B'); print(LQ);
-	printf("\n 삽입 C>>"); enLQueue(LQ, 'C'); print(LQ);
-	data = peek(LQ); printf("peek item: %c\n", data);
-	printf("\n삭제>>"); data = deLQueue(LQ); print(LQ);
-	printf("\t삭제 데이터:%c", data);
-	printf("\n삭제>>"); data = deLQueue(LQ); print(LQ);
-	printf("\t삭제 데이터:%c", data);
-	printf("\n삭제>>"); data = deLQueue(LQ); print(LQ);
-	printf("\t삭제 데이터:%c", data);
 }
