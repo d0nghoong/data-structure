@@ -10,7 +10,7 @@ typedef struct heapType {
 }heapType;
 
 heapType* createHeapType();
-void inserHeapType(heapType* h, int item);
+void insertHeapType(heapType* h, int item);
 int deleteHeapType(heapType* h);
 void printHeap(heapType* h);
 
@@ -34,6 +34,7 @@ void insertHeapType(heapType* h, int item) {
 
 int deleteHeapType(heapType* h) {
 	int parent, child;
+	int temp = h->heap[1];
 	int item = h->heap[h->heap_size];
 	parent = 1; child = 2;
 	h->heap_size -= 1;
@@ -47,6 +48,30 @@ int deleteHeapType(heapType* h) {
 		}
 	}
 	h->heap[parent] = item;
-	return item;
+	return temp;
 }
 
+void printHeap(heapType* h) {
+	int i;
+	printf("Heap: ");
+	for (i = 1; i <= h->heap_size; i++) {
+		printf("[%d]", h->heap[i]);
+	}
+}
+
+void main() {
+	int i, n, item;
+	heapType* heap = createHeapType();
+	insertHeapType(heap, 10);
+	insertHeapType(heap, 45);
+	insertHeapType(heap, 19);
+	insertHeapType(heap, 11);
+	insertHeapType(heap, 96);
+
+	printHeap(heap);
+	n = heap->heap_size;
+	for (i = 1; i <= n; i++) {
+		item = deleteHeapType(heap);
+		printf("\n delete:[%d]", item);
+	}
+}
